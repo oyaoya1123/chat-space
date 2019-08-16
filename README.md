@@ -32,8 +32,7 @@ Things you may want to cover:
 ### Association
 - has_many :groups_users
 - has_many :messages
-- has_many :groups_chats, through: :groups_user
-- has_many :groups_chats, through: :message
+- has_many :groups, through: :groups_users
 
 ## groups_usersテーブル
 
@@ -44,7 +43,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- belongs_to :groups_chat
+- belongs_to :group
 
 ### index
 - add_index :group_id
@@ -60,12 +59,12 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- belongs_to :groups_chat
+- belongs_to :group
 
 ### index
 - add_index :group_id
 
-## groups_chatsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -74,5 +73,4 @@ Things you may want to cover:
 ### Association
 - has_many :groups_users
 - has_many :messages
-- has_many :groups_chats, through: :groups_user
-- has_many :groups_chats, through: :message
+- has_many :users, through: :groups_users

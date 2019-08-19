@@ -1,4 +1,4 @@
-@import "./variable";
+/*
 .flash-box {
   color: white;
   font-size: 1rem;
@@ -9,7 +9,7 @@
     background-color: #38aef0;
   }
 }
-
+*/
 .chat-side {
   width: 300px;
   height: 100vh;
@@ -20,6 +20,7 @@
   }
   .side-header {
     height: 100px;
+    ine-height: 100px;
     display: flex;
     align-items: center;
     background-color: $side-header-bkcolor;
@@ -34,8 +35,10 @@
       }
       &__menu {
         display: flex;
+        /*line-height: 24px;*/
         li {
           margin-left: 0.3rem;
+          font-size: 16px;
         }
         &__new-group {
         }

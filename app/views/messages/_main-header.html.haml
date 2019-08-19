@@ -1,0 +1,12 @@
+.main-header
+  .main-header__left-box
+    %h2.main-header__left-box__current-group
+      = @group.name
+    %ul.main-header__left-box__member-list
+      %li.main-header__left-box__member-list__member
+        Member : 
+      - @group.users.each do |user|
+        %li.main-header__left-box__member-list__member
+          = user.name
+  =link_to root_path do
+    .main-header__edit-btn Edit

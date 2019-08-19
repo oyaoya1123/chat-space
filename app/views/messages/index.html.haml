@@ -1,3 +1,7 @@
 .wrapper
   = render "side"
-  = render "main"
+  .chat-main
+    = render "main-header"
+    .messages
+      = render partial: 'message', collection: @messages
+    = render "form"

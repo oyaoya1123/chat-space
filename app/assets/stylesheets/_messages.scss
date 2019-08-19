@@ -118,6 +118,8 @@
         font-size: 14px;
         margin-bottom: 10px;
       }
+      &__image {
+      }
     }
   }
   .form {
@@ -147,15 +149,15 @@
           }
         }
       }
-    }
-    .submit-btn {
-      width: 100px;
-      height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
-      background-color: $main-form-submit-btn-bkcolor;
-      color: $main-form-submit-btn-font-color;
-      cursor: pointer;
+      .submit-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $main-form-submit-btn-bkcolor;
+        color: $main-form-submit-btn-font-color;
+        cursor: pointer;
+      }
     }
   }
 }

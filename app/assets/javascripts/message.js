@@ -42,8 +42,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
-      $('.input-box__text').val('')
-      $('.input-box__image__file').val('')
+      $('.new_message')[0].reset();
       scrollBottom();
       $('.submit-btn').prop('disabled', false);
     })

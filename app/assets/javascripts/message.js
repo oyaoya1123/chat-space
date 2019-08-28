@@ -6,11 +6,7 @@ function scrollBottom(){
 }
 $(function(){
   function buildHTML(message){
-    if(message.image){
-      var img = `<img class="message__image" src=${message.image} />`
-    } else {
-      img = ``
-    }
+    var img = message.image ? `<img class="message__image" src=${message.image} />` : ``
     var html = `<div class='message'>
                   <div class='message__upper-info'>
                     <p class='message__upper-info__talker'>

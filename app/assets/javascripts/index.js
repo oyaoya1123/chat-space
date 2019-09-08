@@ -16,10 +16,16 @@ $(function() {
   }
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
+
+    var ids = [];
+    $('input[name="group[user_ids][]"]').each(function(i) {
+      ids[i] = $(this).val();
+    });
+
     $.ajax({
       type: 'GET',
       url: '/users',
-      data: { keyword: input },
+      data: { keyword: input, user_ids: ids },
       dataType: 'json',
     })
     .done(function(users){

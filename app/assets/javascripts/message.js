@@ -61,7 +61,6 @@ $(function(){
         insertHTML += buildHTML(value);
       });
       $('.messages').append(insertHTML)
-      scrollBottom();
     })
     .fail(function() {
       alert('reload error');

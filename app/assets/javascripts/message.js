@@ -59,6 +59,7 @@ $(function(){
       var insertHTML = '';
       $.each(messages, function(index, value){
         insertHTML += buildHTML(value);
+        scrollBottom();
       });
       $('.messages').append(insertHTML)
     })
